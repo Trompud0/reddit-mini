@@ -1,6 +1,6 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
-export const fetchSubReddit = createAsyncThunk(
+const fetchSubReddit = createAsyncThunk(
     'subReddits/fetchSubReddit',
     async () => {
       const response = await fetch('https://www.reddit.com/subreddits.json');

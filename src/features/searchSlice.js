@@ -1,6 +1,6 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
-export const fetchSearch = createAsyncThunk(
+const fetchSearch = createAsyncThunk(
     'search/fetchSearch',
      async (searchTerm, thunkAPI) => {
        const response = await fetch(`https://www.reddit.com/search.json?q=${searchTerm}`);
