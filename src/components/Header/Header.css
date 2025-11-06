@@ -1,0 +1,21 @@
+.header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: #fff;
+    height: 64px;
+    align-content: center;
+}
+
+.logo {
+    display: flex;
+    align-self: center;
+    justify-self: start;
+}
+
+.headerText {
+    font-size: 2.5em;
+}
+
+.logoAndText {
+    display: flex;
+}

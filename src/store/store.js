@@ -7,7 +7,7 @@ const store = configureStore({
     reducer: {
       feed: feedSliceReducer,
       search: searchSliceReducer,
-      subReddit: subRedditSliceReducer
+      subReddits: subRedditSliceReducer
     }
 })
 
