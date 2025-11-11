@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./SubRedditItem.css";
+import "./subRedditItem.css";
 
 const SubRedditItem = ({subReddit, onSelect}) => {
     const title = subReddit.title || "No Title";
