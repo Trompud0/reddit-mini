@@ -17,7 +17,7 @@ const Search = () => {
     <>
       <form onSubmit={onSearchTermSubmit} className="searchForm">
         <input value={searchTerm} onChange={e => setSearchTerm(e.target.value)} placeholder="Search"></input>
-        <button type="submit" className="search-button"></button>
+        <button type="submit" className="search-button"><img src="/search-image.jpg" alt="Search" className="searchImage"/></button>
       </form>
     </>
   )

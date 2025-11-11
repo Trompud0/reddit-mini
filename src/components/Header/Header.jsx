@@ -5,7 +5,7 @@ import "./Header.css";
 
 
 const Header = () => {
-    const icon = "Reddit-Logo.webp";
+    const icon = "./Reddit-Logo.webp";
 
   return (
     <header className="header">
