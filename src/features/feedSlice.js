@@ -3,7 +3,7 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 const fetchFeed = createAsyncThunk(
     'feed/fetchfeed',
      async (subreddit, thunkAPI) => {
-       const response = await fetch(`/api/reddit/${subreddit}`);
+       const response = await fetch(`https://reddit-mini-wyoy.onrender.com/api/reddit/${subreddit}`);
        const data = await response.json();
        console.log(data);
        if (!data.data || !data.data.children) {
@@ -17,7 +17,7 @@ const fetchFeed = createAsyncThunk(
 const fetchComments = createAsyncThunk(
     'feed/fetchComments',
      async ({subreddit, postId}, thunkAPI) => {
-       const response = await fetch(`/api/reddit/comments/${subreddit}/${postId}
+       const response = await fetch(`https://reddit-mini-wyoy.onrender.com/api/reddit/comments/${subreddit}/${postId}
         `);
        const data = await response.json();
        console.log(data);
