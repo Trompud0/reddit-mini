@@ -1,0 +1,11 @@
+.subReddit {
+    cursor: pointer;
+}
+
+.subReddit:active {
+    background-color: #d1cfcf;
+}
+
+.subRedditList {
+    list-style: none;
+}

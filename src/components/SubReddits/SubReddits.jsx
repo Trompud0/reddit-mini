@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetchSubReddit } from "../../features/subRedditSlice.js";
 import SubRedditItem from "../SubRedditItem/SubRedditItem.jsx";
 import { fetchFeed } from "../../features/feedSlice.js";
+import "./SubReddits.css";
 
 const SubReddits = () => {
     const subReddits = useSelector((state) => state.subReddits.subReddits);
@@ -43,7 +44,8 @@ const SubReddits = () => {
     }
 
     return (
-        <div>
+        <div className="subRedditSection">
+          <h2>SubReddits</h2>  
           {subReddits.map(subReddit => (
             <SubRedditItem key={subReddit.data.id} subReddit={subReddit.data} onSelect={handleSelect}/>
             ))}

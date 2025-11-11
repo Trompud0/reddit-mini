@@ -1,6 +1,7 @@
 import { fetchComments } from "../../features/feedSlice.js";
 import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import "./Comments.css";
 
 const Comments = ({subreddit, postId}) => {
     const comments = useSelector((state) => state.feed.comments[postId] || []);
@@ -42,8 +43,8 @@ const Comments = ({subreddit, postId}) => {
   return (
     <div>
       {comments.map(comment => (
-        <div key={comment.data.id}>
-          <p>{comment.data.author}:{comment.data.body}</p>
+        <div key={comment.data.id} className="commentContainer">
+          <p><span className="commentAuthor">{comment.data.author}</span>: {comment.data.body}</p>
         </div>
       ))}
     </div>

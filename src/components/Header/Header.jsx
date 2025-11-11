@@ -11,7 +11,7 @@ const Header = () => {
     <header className="header">
       <div className="logoAndText"> 
         <img src={icon} alt="" width={40} height={40} className="logo"/>  
-        <h1 className="headerText">RedditMinimal</h1>
+        <h1 className="headerText"><span className="blueText">Reddit</span>Minimal</h1>
       </div> 
       <Search/>
     </header>

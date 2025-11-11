@@ -4,6 +4,9 @@
   border-radius: 8px;
 }
 
+.image {
+    width: 100%;
+}
 
 .postDetails {
   margin-top: 16px;
@@ -15,11 +18,18 @@
   align-items: center;
 }
 
+@media only screen and (max-width: 600px) {
+    .postDetails {
+        display: grid;
+        justify-content: center;
+    }
+}
+
 
 .postContainer {
     background: #fff;
     box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
-    margin-bottom: 36px;
+    margin: 36px;
     border-radius: 4px;
     padding: 24px;
     transition: box-shadow .1s ease-in;

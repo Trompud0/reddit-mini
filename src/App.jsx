@@ -7,13 +7,13 @@ import SubReddits from './components/SubReddits/SubReddits.jsx';
 function App() {
 
   return (
-    <div> 
+    <> 
       <Header />
-      <main>
+      <main className='main'>
         <Posts />
       </main>
       <SubReddits />
-    </div>
+    </>
   )
 }
 

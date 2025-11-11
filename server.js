@@ -8,6 +8,20 @@ function delay(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 
+app.get('/api/reddit/subreddits', async (req, res) => {
+  try {
+    const response = await fetch('https://www.reddit.com/subreddits.json?limit=10', {
+      headers: { 'User-Agent': 'my-reddit-app/0.1 by myusername' }
+    });
+    if (!response.ok) {
+      return res.status(500).json({ error: 'Reddit API error' });
+    }
+    const data = await response.json();
+    res.json(data);
+  } catch (error) {
+    res.status(500).json({ error: 'Failed to fetch subreddits from Reddit' });
+  }
+});
 
 app.get('/api/reddit/:subreddit', async (req, res) => {
   const { subreddit } = req.params;
